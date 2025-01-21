@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nogueira</groupId>
-	<artifactId>gmdb</artifactId>
+	<artifactId>dslist</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gmdb</name>
+	<name>dslist</name>
 	<description>Prática Java Spring</description>
 	<url/>
 	<licenses>

@@ -1,13 +1,13 @@
-package com.nogueira.gmdb;
+package com.nogueira.dslist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GmdbApplication {
+public class DslistApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GmdbApplication.class, args);
+		SpringApplication.run(DslistApplication.class, args);
 	}
 
 }
