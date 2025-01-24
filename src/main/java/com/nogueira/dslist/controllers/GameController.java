@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/games")
+@CrossOrigin (allowedHeaders = "*", origins = "*")
 public class GameController {
 
     @Autowired
