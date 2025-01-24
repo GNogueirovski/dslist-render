@@ -1,13 +1,17 @@
-FROM eclipse-temurin:17-alpine
+FROM maven:3.9.9-eclipse-temurin-17-alpine AS build
 
-VOLUME /tmp
+WORKDIR /app
 
-EXPOSE 8080
+COPY pom.xml .
 
-ARG JAR_FILE=target/dslist-1.0.jar
+COPY src ./src
 
-ADD ${JAR_FILE} app.jar
+RUN mvn clean package
 
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+FROM openjdk:17-alpine
 
-LABEL authors="Gabriel"
+WORKDIR /app
+
+COPY --from=build /app/target/dslist-1.0.jar ./dslist-1.0.jar
+
+CMD ["java", "-jar", "dslist-1.0.jar"]
